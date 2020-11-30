@@ -138,7 +138,9 @@ public class Login extends javax.swing.JFrame {
                     principal.setVisible(true);
                 }
                 } else {
-                    JOptionPane.showMessageDialog(null, "Alumno no registrado.");
+                    JOptionPane.showMessageDialog(null, "Usuario no registrado.");
+                    txt_usuario.setText("");
+                    jpassClave.setText("");
                 }
                 
             }catch (Exception e){
