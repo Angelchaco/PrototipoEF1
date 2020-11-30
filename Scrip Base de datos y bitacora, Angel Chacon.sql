@@ -16,6 +16,7 @@ fecha datetime not null
 
 select * from BitacoraAcciones;
 
+<<<<<<< HEAD
 drop trigger Bitacora_Guardar;
 
 insert into inventario values(0,1,1,1,1,"comida","A",250,150,100,"prueba bitacora",5/11/19);
@@ -31,6 +32,11 @@ begin
 end;
 
 //
+=======
+#drop trigger Bitacora_Acciones;
+
+CREATE TRIGGER Bitacora_Guardar AFTER INSERT ON inventario FOR EACH ROW INSERT INTO BitacoraAcciones values (0, "Nuevo Registro Guardado", now());
+>>>>>>> master
 
 CREATE TRIGGER Bitacora_Modificar AFTER UPDATE ON inventario FOR EACH ROW INSERT INTO BitacoraAcciones values (0, "Registro Modificado", now());
 
